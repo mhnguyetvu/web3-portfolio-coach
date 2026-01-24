@@ -6,10 +6,6 @@ Built for a hackathon checkpoint with emphasis on **functionality + observabilit
 ---
 
 ## Live Demo
-
-Base URL (ngrok):  
-https://chromophoric-unmineralized-norris.ngrok-free.dev
-
 Recommended:
 - Docs (Swagger UI): https://chromophoric-unmineralized-norris.ngrok-free.dev/docs
 - Health check: https://chromophoric-unmineralized-norris.ngrok-free.dev/health
