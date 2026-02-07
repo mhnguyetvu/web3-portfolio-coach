@@ -1,52 +1,36 @@
-# Web3 Portfolio Coach (MVP)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A lightweight Web3 portfolio coach that analyzes a seeded demo wallet snapshot and returns **responsible**, rule-based insights (no buy/sell signals, no price predictions).  
-Built for a hackathon checkpoint with emphasis on **functionality + observability**.
+## Getting Started
 
----
+First, run the development server:
 
-## Live Demo
-Recommended:
-- Docs (Swagger UI): https://chromophoric-unmineralized-norris.ngrok-free.dev/docs
-- Health check: https://chromophoric-unmineralized-norris.ngrok-free.dev/health
-- Portfolio demo: https://chromophoric-unmineralized-norris.ngrok-free.dev/portfolio/demo
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## What it does (Checkpoint MVP)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### ✅ Core endpoints
-- **GET `/health`**  
-  Health check to confirm the service is running.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- **GET `/portfolio/demo`**  
-  Returns a seeded demo wallet snapshot + deterministic quant metrics:
-  - total USD value
-  - concentration (top1/top5 %)
-  - stablecoin ratio (%)
+## Learn More
 
-- **POST `/chat`**  
-  Chat-style endpoint that turns portfolio metrics into a short action checklist.
-  - grounded on deterministic metrics (no hallucinated numbers)
-  - includes safety guardrails (no buy/sell signals, no price predictions)
+To learn more about Next.js, take a look at the following resources:
 
-### ✅ Premium stub
-- **GET `/premium/report`**  
-  A “deep report” stub with a simple drawdown scenario. Planned to be paywalled later (x402).
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### ✅ Observability (Opik)
-- Each `/chat` request is traced in **Opik** with:
-  - a top-level trace: **`chat_request`**
-  - a nested span for quant computation: **`compute_metrics`**
-  - tags/metadata for filtering (e.g., `checkpoint2`, `chat`, `mvp`, `quant`)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## Tech Stack
-- FastAPI + Uvicorn
-- Deterministic “quant tools” (pure Python)
-- Opik tracing for observability
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
