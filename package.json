@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@ai-sdk/langchain": "^2.0.82",
     "@ai-sdk/react": "^3.0.79",
     "@langchain/core": "^1.1.19",
@@ -27,13 +28,21 @@
     "react-syntax-highlighter": "^16.1.0",
     "remark-gfm": "^4.0.1",
     "zod": "^4.3.6"
+=======
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+>>>>>>> 0bafc735 (Initial commit from Create Next App)
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+<<<<<<< HEAD
     "@types/react-syntax-highlighter": "^15.5.13",
+=======
+>>>>>>> 0bafc735 (Initial commit from Create Next App)
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
