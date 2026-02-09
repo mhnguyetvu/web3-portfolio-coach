@@ -34,3 +34,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deploy with ngrok (ngrok-free.dev)
+
+Expose the app on a public URL using [ngrok](https://ngrok-free.dev) (free tier supported).
+
+### Option A: Local + ngrok
+
+1. Install [ngrok](https://ngrok-free.dev/download) and add your auth token.
+2. Build and start the app:
+   ```bash
+   pnpm install && pnpm build && pnpm start
+   ```
+3. In another terminal, start a tunnel:
+   ```bash
+   ngrok http 3000
+   ```
+4. Open the HTTPS URL ngrok prints (e.g. `https://abc123.ngrok-free.app`).
+
+### Option B: Docker + ngrok
+
+1. Build and run the container:
+   ```bash
+   docker build -t my-defai-chatbot .
+   docker run -p 3000:3000 --env-file .env.local my-defai-chatbot
+   ```
+2. In another terminal:
+   ```bash
+   ngrok http 3000
+   ```
+
+**Environment:** Set `GEMINI_API_KEY` (e.g. in `.env.local` or container env) so the chat API works.

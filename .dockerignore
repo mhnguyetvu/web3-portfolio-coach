@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.*
+.pnpm-store
+
+# Build
+.next
+out
+build
+
+# Env (inject at runtime)
+.env*
+!.env.example
+
+# Git / IDE
+.git
+.gitignore
+.cursor
+.shared
+
+# Misc
+*.md
+!README.md
+Dockerfile
+.dockerignore
+coverage
+*.log
+.DS_Store
