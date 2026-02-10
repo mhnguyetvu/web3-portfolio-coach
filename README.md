@@ -30,11 +30,27 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
-<<<<<<< HEAD
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Push the repo to GitHub** (if you haven’t already).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Import on Vercel**
+   - Go to [vercel.com/new](https://vercel.com/new)
+   - Import your Git repository (e.g. `my-defai-chatbot`)
+   - Vercel will detect Next.js and use the project’s `vercel.json` (pnpm install/build).
+
+3. **Set environment variable**
+   - In the Vercel project: **Settings → Environment Variables**
+   - Add:
+     - **Name:** `GEMINI_API_KEY`
+     - **Value:** your [Google AI Studio API key](https://aistudio.google.com/apikey)
+   - Redeploy (or trigger a new deployment) so the variable is applied.
+
+4. **Deploy**
+   - Click **Deploy**. Each push to your main branch will trigger a new deployment.
+
+Your app will be available at `https://<project-name>.vercel.app` (or your custom domain).
+
+---
 
 ## Deploy with ngrok (ngrok-free.dev)
 
@@ -66,9 +82,3 @@ Expose the app on a public URL using [ngrok](https://ngrok-free.dev) (free tier 
    ```
 
 **Environment:** Set `GEMINI_API_KEY` (e.g. in `.env.local` or container env) so the chat API works.
-=======
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 0bafc735 (Initial commit from Create Next App)
